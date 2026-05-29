@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolatier | Boutique Gourmet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🍫 Chocolatier</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Seção do Produto -->
+        <section class="produto-wrapper">
+            
+            <!-- Imagem do Produto -->
+            <div class="produto-imagem">
+                <img src="https://unsplash.com" alt="Barra de Chocolate Intenso">
+            </div>
+
+            <!-- Detalhes da Compra -->
+            <div class="produto-info">
+                <span class="tag">Edição Limitada</span>
+                <h1>Chocolate Intenso 75% Cacau</h1>
+                <p class="preco">R$ 28,90</p>
+                <p class="descricao-curta">Origem única com amêndoas selecionadas do sul da Bahia. Notas florais e final persistente.</p>
+                
+                <div class="acoes">
+                    <button class="btn-comprar" id="btnComprar">Adicionar ao Carrinho</button>
+                </div>
+
+                <!-- Abas da Ficha Detalhada -->
+                <div class="abas-container">
+                    <div class="abas-botoes">
+                        <button class="aba-btn ativa" data-aba="ingredientes">Ingredientes</button>
+                        <button class="aba-btn" data-aba="nutricional">Ficha Nutricional</button>
+                        <button class="aba-btn" data-aba="origem">Origem & Detalhes</button>
+                    </div>
+                    
+                    <div class="aba-conteudo ativo" id="ingredientes">
+                        <p>Massa de cacau orgânico, açúcar demerara, manteiga de cacau e raspas de baunilha natural.</p>
+                        <p><strong>Alérgicos:</strong> Não contém glúten. Pode conter traços de leite e castanhas.</p>
+                    </div>
+
+                    <div class="aba-conteudo" id="nutricional">
+                        <table>
+                            <tr><th>Informação (Porção 25g)</th><th>VD%</th></tr>
+                            <tr><td>Valor Energético: 135 kcal</td><td>7%</td></tr>
+                            <tr><td>Carboidratos: 11g</td><td>4%</td></tr>
+                            <tr><td>Proteínas: 2,1g</td><td>3%</td></tr>
+                            <tr><td>Gorduras Totais: 9,2g</td><td>17%</td></tr>
+                            <tr><td>Fibra Alimentar: 3,5g</td><td>14%</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="aba-conteudo" id="origem">
+                        <ul>
+                            <li><strong>Tipo do Cacau:</strong> Trinitário</li>
+                            <li><strong>Torra:</strong> Média-baixa artesanal</li>
+                            <li><strong>Processo:</strong> Bean-to-bar (da amêndoa à barra)</li>
+                            <li><strong>Peso Líquido:</strong> 80g</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

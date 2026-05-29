@@ -1,0 +1,201 @@
+/* Reset e Variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+    --primaria: #4a2c11;
+    --secundaria: #7c5329;
+    --destaque: #d4a373;
+    --fundo: #fefae0;
+    --texto: #281a0c;
+    --branco: #ffffff;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primaria);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--destaque);
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.produto-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    background: var(--branco);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Imagem */
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Informações do Chocolate */
+.tag {
+    background-color: var(--destaque);
+    color: var(--primaria);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    margin: 0.5rem 0;
+}
+
+.preco {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secundaria);
+    margin-bottom: 1rem;
+}
+
+.descricao-curta {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn-comprar {
+    background-color: var(--primaria);
+    color: var(--branco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+    margin-bottom: 2.5rem;
+}
+
+.btn-comprar:hover {
+    background-color: var(--secundaria);
+}
+
+/* Abas da Ficha Detalhada */
+.abas-botoes {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 1.5rem;
+}
+
+.aba-btn {
+    background: none;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #888;
+    position: relative;
+}
+
+.aba-btn.ativa {
+    color: var(--primaria);
+    font-weight: bold;
+}
+
+.aba-btn.ativa::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primaria);
+}
+
+.aba-conteudo {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.aba-conteudo.ativo {
+    display: block;
+}
+
+/* Tabelas e Listas da Ficha */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    color: var(--secundaria);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--destaque);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Animação simples */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
