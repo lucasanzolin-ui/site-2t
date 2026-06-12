@@ -18,7 +18,7 @@
 body {
     background-color: var(--fundo);
     color: var(--texto);
-    line-height: 1.6;
+    line-height: 1.0;
 }
 
 /* Header */
@@ -32,9 +32,26 @@ header {
 }
 
 header .logo {
+    display: flex;
+    align-items: center;
     font-size: 1.8rem;
     font-weight: bold;
 }
+
+header .logo p{
+    margin-right: 10px;
+}
+
+header .logo span{
+    margin-top: 50px;
+}
+
+.titulo-logo{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 8.0px;
+}
+
 
 header nav a {
     color: var(--branco);
